@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <h1> Scientific Calculator</h1>
+    <input type="text" id="display" placeholder="Enter value" disabled>
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="deleteChar()">DEL</button>
+      <button onclick="appendCharacter('(')">(</button>
+      <button onclick="appendCharacter(')')">)</button>
+      <button onclick="appendCharacter('^')">^</button>
+<!--      <button onclick="appendCharacter('sqrt')">√</button>-->
+      <button onclick="appendCharacter('sin(')">sin</button>
+      <button onclick="appendCharacter('cos(')">cos</button>
+      <button onclick="appendCharacter('tan(')">tan</button>
+      <button onclick="appendCharacter('log(')">log</button>
+<!--      <button onclick="appendCharacter('ln(')">ln</button>-->
+      <button onclick="appendCharacter('/')">/</button>
+      <button onclick="appendCharacter('*')">*</button>
+      <button onclick="appendCharacter('-')">-</button>
+      <button onclick="appendCharacter('+')">+</button>
+      <button onclick="appendCharacter('.')">.</button>
+      <button onclick="appendCharacter(0)">0</button>
+      <button onclick="appendCharacter(1)">1</button>
+      <button onclick="appendCharacter(2)">2</button>
+      <button onclick="appendCharacter(3)">3</button>
+      <button onclick="appendCharacter(4)">4</button>
+      <button onclick="appendCharacter(5)">5</button>
+      <button onclick="appendCharacter(6)">6</button>
+      <button onclick="appendCharacter(7)">7</button>
+      <button onclick="appendCharacter(8)">8</button>
+      <button onclick="appendCharacter(9)">9</button>
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+
+</body>
+</html>
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Scientific Calculator</title>-->
+<!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<!--  <link rel="stylesheet" href="style.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--  <div class="container d-flex justify-content-center align-items-center vh-100">-->
+<!--    <div class="calculator card shadow-sm p-4 rounded">-->
+<!--      <input type="text" id="display" class="form-control mb-3 text-end" placeholder="0" disabled>-->
+
+<!--      <div class="row g-2">-->
+<!--        <div class="col-3"><button class="btn btn-danger w-100" onclick="clearDisplay()">C</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-secondary w-100" onclick="deleteChar()">DEL</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter('(')">(</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter(')')">)</button></div>-->
+
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter('^')">^</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter('sqrt')">√</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter('sin(')">sin</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter('cos(')">cos</button></div>-->
+
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter('tan(')">tan</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter('log(')">log</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter('ln(')">ln</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-warning w-100" onclick="appendCharacter('/')">/</button></div>-->
+
+<!--        <div class="col-3"><button class="btn btn-warning w-100" onclick="appendCharacter('*')">*</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-warning w-100" onclick="appendCharacter('-')">-</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-warning w-100" onclick="appendCharacter('+')">+</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter('.')">.</button></div>-->
+
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter(7)">7</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter(8)">8</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter(9)">9</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter(4)">4</button></div>-->
+
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter(5)">5</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter(6)">6</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter(1)">1</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter(2)">2</button></div>-->
+
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter(3)">3</button></div>-->
+<!--        <div class="col-3"><button class="btn btn-light w-100" onclick="appendCharacter(0)">0</button></div>-->
+<!--        <div class="col-12"><button class="btn btn-success w-100" onclick="calculate()">=</button></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--  <script src="script.js"></script>-->
+<!--</body>-->
+<!--</html>-->
